@@ -1,0 +1,33 @@
+﻿<Window x:Class="AzureNotificationsApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TapNOrder Notifications" Height="544.179" Width="800" Background="#0f87b4" ResizeMode="NoResize" Icon="Images/tnoicon.png">
+    <Grid>
+        <Border BorderBrush="#FF0FC1F5" BorderThickness="1" HorizontalAlignment="Left" Height="160" Margin="33,255,0,0" VerticalAlignment="Top" Width="625"/>
+
+        <Image HorizontalAlignment="Left" Height="97" Margin="670,22,0,0" VerticalAlignment="Top" Width="114" Source="Images/tnologo.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="194,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="338,415,-185,0" VerticalAlignment="Top" Width="641" Source="Images/build.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="-127,415,0,0" VerticalAlignment="Top" Width="641" Source="Images/build.png"/>
+        <Image HorizontalAlignment="Left" Height="659" Margin="565,85,0,-93" VerticalAlignment="Top" Width="228" Source="Images/lamp.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="33,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="28"><Run Text="Text in Greek:"/><LineBreak/><Run Text=""/></TextBlock>
+        <TextBox x:Name="EnglishTxb" HorizontalAlignment="Left" Height="23" Margin="152,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404" FontSize="16"/>
+        <TextBox x:Name="GreekTxb" HorizontalAlignment="Left" Height="23" Margin="152,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404" FontSize="16"/>
+        <Button x:Name="iOSSend" Content="Send" HorizontalAlignment="Left" Margin="431,217,0,0" VerticalAlignment="Top" Width="125" Height="24" Background="White" BorderBrush="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="40,255,0,0" TextWrapping="Wrap" Text="Output:" VerticalAlignment="Top" Height="19" Width="57" Foreground="White" FontSize="16"/>
+        <ScrollViewer x:Name="Scrolloutput" Margin="41,261,136,105" FontSize="10" >
+            <TextBlock x:Name="OutputText" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" Width="600" Foreground="White" FontSize="16"/>
+        </ScrollViewer>
+        <CheckBox x:Name="iOSTest" Content="Test Enabled" HorizontalAlignment="Left" Margin="321,222,0,0" VerticalAlignment="Top" Height="18" Foreground="White" BorderBrush="White" IsChecked="True" Width="110"/>
+        <TextBlock HorizontalAlignment="Left" Margin="33,88,0,0" TextWrapping="Wrap" Text="Text in English:" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="114"/>
+        <TextBlock HorizontalAlignment="Left" Margin="33,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="139" Height="26"><Run Text="Tag Expression:"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="TagsTxb" HorizontalAlignment="Left" Height="23" Margin="152,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404" FontSize="16"/>
+        <TextBlock x:Name="TagsTb" HorizontalAlignment="Left" Margin="33,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Width="600" Height="37" Text="Current Tags: tnoandroid, tnoios, ios-{appversion}, android-{appversion}"/>
+        <TextBlock x:Name="ActiveDevicesTxb" HorizontalAlignment="Left" Margin="33,10,0,0" TextWrapping="Wrap" Text="Active Devices:" VerticalAlignment="Top" Foreground="White" FontSize="20" Width="625"/>
+        <Button x:Name="DevicesDeleteBtn" Content="Delete Registrations " HorizontalAlignment="Left" Margin="33,44,0,0" VerticalAlignment="Top" Width="161" Height="24" Background="White" BorderBrush="White" Click="DevicesDeleteBtn_Click"/>
+        <CheckBox x:Name="AndroidRegistrations" Content="in Android" HorizontalAlignment="Left" Margin="212,49,0,0" VerticalAlignment="Top" Height="18" Foreground="White" BorderBrush="White" Width="110"/>
+        <CheckBox x:Name="iOSRegistrations" Content="in iOS" HorizontalAlignment="Left" Margin="328,49,0,0" VerticalAlignment="Top" Height="18" Foreground="White" BorderBrush="White" Width="110"/>
+        <CheckBox x:Name="DebugRegistrations" Content="in Debug" HorizontalAlignment="Left" Margin="431,49,0,0" VerticalAlignment="Top" Height="18" Foreground="White" BorderBrush="White" Width="110"/>
+
+    </Grid>
+</Window>
